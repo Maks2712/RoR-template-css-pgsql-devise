@@ -1,14 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Examples</h1>
+<h1 class="title-lg mt-lg mb-lg">Examples</h1>
 
-<div id="examples">
+<div id="examples" class= "container mb-lg">
   <% @examples.each do |example| %>
     <%= render example %>
-    <p>
-      <%= link_to "Show this example", example %>
-    </p>
+    <div class="mt-sm mb-sm">
+      <%= link_to "Show this example", example, class:'button' %>
+      <%= button_to fa_icon('trash-o'), '#'%>
+    </div>
   <% end %>
+   <%= button_to fa_icon('trash-o'), '#'%>
 </div>
 
 <%= link_to "New example", new_example_path %>
